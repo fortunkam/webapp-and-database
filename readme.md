@@ -1,4 +1,4 @@
-# Simple script to configure an app service and datasbe for an Umbraco 7 empty install 
+# Simple script to configure an app service and database for an Umbraco 7 empty install 
 
 - Azure App Service with Managed Identity
 - SQL Server + database with firewall rules to lock down DB to self and web app only
