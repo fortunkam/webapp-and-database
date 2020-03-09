@@ -1,1 +1,3 @@
 password.*
+terraform/terraform.tfstate*
+terraform/.terraform

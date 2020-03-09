@@ -5,3 +5,9 @@
 - Key Vault populated with SQL Server and App Insights connection string (and secret read persmissions granted to App Service)
 - App Service settings for App Insights and Umbraco connection string (using KeyVault references)
 - Storage account and CDN (not used yet but the theory is the Umbraco media library would be served from here)
+
+
+## UPDATE - Now with Terraform script (as an alternative to the CLI script)
+TODO: The script doesn't contain the blob storage container or CDN yet.
+The script uses an ARM template to setup the slot settings (and has a commented out block for access restrictions (untested!)), these resources are not controlled by terraform!
+I have excluded the backend support for now.
