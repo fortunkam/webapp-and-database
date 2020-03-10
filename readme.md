@@ -11,3 +11,5 @@
 TODO: The script doesn't contain the blob storage container or CDN yet.
 The script uses an ARM template to setup the slot settings (and has a commented out block for access restrictions (untested!)), these resources are not controlled by terraform!
 I have excluded the backend support for now.
+
+**CAVEAT** This is for demo purposes only, in production you don't want to be using the master credentials (SQL username and password) in your web app. 
