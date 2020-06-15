@@ -3,13 +3,13 @@
 # variable "azure_subscription_client_secret" {}
 # variable "azure_tenant_id" {}
 variable resource_group_name {
-    default="umbraco-tf-demo"
+    default="web-tf-demo"
 }
 variable location {
-    default="UK South"
+    default="uksouth"
 }
 variable prefix {
-    default="umbtfmf"
+    default="webmf01"
 }
 locals  {
     storage_name="${var.prefix}storage"
@@ -28,3 +28,4 @@ locals  {
 variable sql_username {
     default="SQLADMIN"
 }
+
