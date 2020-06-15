@@ -1,3 +1,4 @@
 password.*
 terraform/terraform.tfstate*
 terraform/.terraform
+terraform/deployapp.ps1

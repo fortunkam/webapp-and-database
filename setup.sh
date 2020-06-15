@@ -16,7 +16,7 @@ APPINSIGHTS=$(echo $PREFIX)-insights
 CDNENDPOINT_ORIGIN="$STORAGENAME.blob.core.windows.net"
 
 SQLUID=SQLADMIN
--p 'SQL Master Password' SQLPWD
+read -p 'SQL Master Password' SQLPWD
 
 
 

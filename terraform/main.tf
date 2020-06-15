@@ -1,5 +1,6 @@
 provider "azurerm" {
-#  version         = "~>1.5"
+  version         = "~>2.13"
+  features {}
 #   subscription_id = var.azure_subscription_id
 #   client_id       = var.azure_subscription_client_id
 #   client_secret   = var.azure_subscription_client_secret

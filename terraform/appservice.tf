@@ -38,14 +38,14 @@ resource "azurerm_app_service" "website" {
   }
 
   connection_string {
-      name="umbracoDbDSN"
+      name="temp_umbracoDbDSN"
       type="SQLServer"
       value="@Microsoft.KeyVault(SecretUri=${azurerm_key_vault_secret.sqlconnectionstring.id})"
   }
 }
 
 output "outbound_ips" {
-    value = azurerm_app_service.website.possible_outbound_ip_addresses
+    value = azurerm_app_service.website.outbound_ip_addresses
 }
 
 resource "azurerm_template_deployment" "webapp" {
@@ -60,4 +60,6 @@ resource "azurerm_template_deployment" "webapp" {
   }
 
   deployment_mode = "Incremental"
+
+  depends_on = [azurerm_app_service.website]
 }

@@ -10,7 +10,7 @@ resource "azurerm_key_vault" "keyvault" {
 
   access_policy {
     tenant_id = data.azurerm_client_config.current.tenant_id
-    object_id = data.azurerm_client_config.current.service_principal_object_id
+    object_id = data.azurerm_client_config.current.object_id
 
     key_permissions = [
       "get",
@@ -57,5 +57,7 @@ resource "azurerm_key_vault_access_policy" "websiteManaged" {
   secret_permissions = [
     "get",
   ]
+
+  depends_on = [azurerm_key_vault.keyvault, azurerm_app_service.website]
 }
 
